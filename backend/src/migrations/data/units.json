@@ -1,0 +1,129 @@
+[
+    {
+      "name": "Gram",
+      "symbol": "g",
+      "category": "Weight",
+      "conversionValue": 1
+    },
+    {
+      "name": "Kilogram",
+      "symbol": "kg",
+      "category": "Weight",
+      "conversionValue": 1000
+    },
+    {
+      "name": "Ounce",
+      "symbol": "oz",
+      "category": "Weight",
+      "conversionValue": 28.3495
+    },
+    {
+      "name": "Pound",
+      "symbol": "lb",
+      "category": "Weight",
+      "conversionValue": 453.592
+    },
+    {
+      "name": "Milligram",
+      "symbol": "mg",
+      "category": "Weight",
+      "conversionValue": 0.001
+    },
+    {
+      "name": "Microgram",
+      "symbol": "μg",
+      "category": "Weight",
+      "conversionValue": 0.000001
+    },
+    {
+      "name": "Milliliter",
+      "symbol": "ml",
+      "category": "Volume",
+      "conversionValue": 1
+    },
+    {
+      "name": "Liter",
+      "symbol": "l",
+      "category": "Volume",
+      "conversionValue": 1000
+    },
+    {
+      "name": "Teaspoon",
+      "symbol": "tsp",
+      "category": "Cooking",
+      "conversionValue": 4.92892
+    },
+    {
+      "name": "Tablespoon",
+      "symbol": "tbsp",
+      "category": "Cooking",
+      "conversionValue": 14.7868
+    },
+    {
+      "name": "Cup",
+      "symbol": "cup",
+      "category": "Cooking",
+      "conversionValue": 240
+    },
+    {
+      "name": "Piece",
+      "symbol": "piece",
+      "category": "Portion",
+      "conversionValue": 1
+    },
+    {
+      "name": "Slice",
+      "symbol": "slice",
+      "category": "Portion",
+      "conversionValue": 1
+    },
+    {
+      "name": "Bunch",
+      "symbol": "bunch",
+      "category": "Portion",
+      "conversionValue": 1
+    },
+    {
+      "name": "Pinch",
+      "symbol": "pinch",
+      "category": "Cooking",
+      "conversionValue": 0.36
+    },
+    {
+      "name": "Small",
+      "symbol": "small",
+      "category": "Size",
+      "conversionValue": 1
+    },
+    {
+      "name": "Medium",
+      "symbol": "medium",
+      "category": "Size",
+      "conversionValue": 1
+    },
+    {
+      "name": "Large",
+      "symbol": "large",
+      "category": "Size",
+      "conversionValue": 1
+    },
+    {
+      "name": "Serving",
+      "symbol": "serving",
+      "category": "Portion",
+      "conversionValue": 1
+    },
+    {
+      "name": "Portion",
+      "symbol": "portion",
+      "category": "Portion",
+      "conversionValue": 1
+    },
+    {
+      "name": "Percent Daily Value",
+      "symbol": "%DV",
+      "category": "Nutritional",
+      "conversionValue": 1
+    }
+  ]
+  

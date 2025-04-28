@@ -1,0 +1,67 @@
+[
+    {
+      "name": "Vegetables",
+      "description": "Rich in fiber, vitamins, and minerals. Vegetables are essential for digestion, disease prevention, and maintaining a healthy metabolism. They are low in calories and high in phytochemicals."
+    },
+    {
+      "name": "Fruits",
+      "description": "Packed with natural sugars, vitamins, antioxidants, and fiber. Fruits help boost the immune system, improve skin health, and protect against chronic diseases. Best consumed fresh."
+    },
+    {
+      "name": "Grains",
+      "description": "Primary source of carbohydrates and fiber. Grains like oats, rice, and wheat provide sustained energy, support digestive health, and contribute essential B vitamins and iron."
+    },
+    {
+      "name": "Proteins",
+      "description": "Includes meats, poultry, fish, beans, and legumes. Proteins are critical for building and repairing tissues, hormone production, and maintaining muscle mass."
+    },
+    {
+      "name": "Dairy",
+      "description": "Milk, cheese, yogurt, and other dairy products provide calcium, protein, and vitamin D, supporting bone strength, nerve function, and muscle health."
+    },
+    {
+      "name": "Oils and Fats",
+      "description": "Healthy fats like olive oil, avocado, and nuts offer essential fatty acids, vitamin E, and energy. They support brain function, hormone balance, and nutrient absorption."
+    },
+    {
+      "name": "Vitamins",
+      "description": "Organic compounds crucial for metabolism, immune function, and overall health. Includes Vitamin A (vision), Vitamin C (immunity), and B vitamins (energy production)."
+    },
+    {
+      "name": "Minerals",
+      "description": "Inorganic nutrients like calcium, potassium, iron, and magnesium. Minerals regulate heartbeat, bone strength, oxygen transport, and muscle contractions."
+    },
+    {
+      "name": "Spices and Herbs",
+      "description": "Add flavor and medicinal benefits. Many spices like turmeric, garlic, and basil have anti-inflammatory and antioxidant properties beneficial for overall health."
+    },
+    {
+      "name": "Beverages",
+      "description": "Includes water, teas, and other non-alcoholic drinks. Hydration is essential for every body process, aiding in digestion, temperature regulation, and detoxification."
+    },
+    {
+      "name": "Supplements",
+      "description": "Concentrated sources of nutrients or other substances with a nutritional effect, such as protein powders, multivitamins, or electrolytes. Useful to correct deficiencies."
+    },
+    {
+      "name": "Sweets and Snacks",
+      "description": "Includes candy, baked goods, and processed snacks. High in sugars and fats, should be consumed moderately. Provides quick energy but low in nutrients."
+    },
+    {
+      "name": "Seafood",
+      "description": "Rich in omega-3 fatty acids, proteins, and iodine. Fish and shellfish support brain health, reduce inflammation, and contribute essential nutrients for thyroid function."
+    },
+    {
+      "name": "Legumes",
+      "description": "Includes beans, lentils, chickpeas, and peas. High in protein, fiber, iron, and folate, supporting muscle repair, heart health, and blood sugar control."
+    },
+    {
+      "name": "Tubers and Roots",
+      "description": "Includes potatoes, sweet potatoes, and carrots. These are rich in starches, beta-carotene, and fiber, offering long-lasting energy and antioxidant support."
+    },
+    {
+      "name": "Nuts and Seeds",
+      "description": "High in healthy fats, proteins, and fiber. Almonds, chia seeds, and walnuts support heart health, brain function, and satiety between meals."
+    }
+  ]
+  
