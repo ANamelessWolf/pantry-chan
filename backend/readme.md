@@ -174,6 +174,7 @@ Command	Purpose
 
 ## 📦 Project Structure
 
+```
 src/
  ├── config/
  ├── controllers/
@@ -188,3 +189,4 @@ src/
  ├── utils/
  ├── app.ts
  └── server.ts
+```
