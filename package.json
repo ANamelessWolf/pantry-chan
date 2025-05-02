@@ -1,0 +1,20 @@
+{
+  "name": "pantry-chan",
+  "version": "1.0.0",
+  "description": "A react app, to manage pantry inventory and cooking recipes",
+  "main": "index.js",
+"scripts": {
+  "dev": "concurrently \"npm:docker:mongo\" \"npm run dev --prefix backend\" \"npm start --prefix frontend\"",
+  "docker:mongo": "docker compose -f docker-compose-mongo.yml up -d",
+  "start:backend": "npm run dev --prefix backend",
+  "start:frontend": "npm start --prefix frontend",
+  "migrate": "npm run migrate --prefix backend",
+  "docker:mongo:stop": "docker compose -f docker-compose-mongo.yml down"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
