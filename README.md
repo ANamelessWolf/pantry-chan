@@ -21,8 +21,8 @@ pantry-chan is a full-stack web application that helps users:
 1. **Clone the repository**:
 
 ```bash
-git clone https://github.com/your-username/pantry-planner.git
-cd pantry-planner
+https://github.com/ANamelessWolf/pantry-chan.git
+cd pantry-chan
 ```
 
 2. **Start MongoDB (Dockerized):**:
