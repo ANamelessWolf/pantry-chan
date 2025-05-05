@@ -1,10 +1,20 @@
-import { Schema, model } from 'mongoose';
-import { v4 as uuidv4 } from 'uuid';
+import { Schema, Types, model } from "mongoose";
+import { v4 as uuidv4 } from "uuid";
 
-const FoodCategorySchema = new Schema({
+export interface IFoodCategory extends Document {
+  name: string;
+  description: string;
+  id: string;
+  _id: Types.ObjectId;
+}
+
+const FoodCategorySchema = new Schema<IFoodCategory>({
   id: { type: String, default: uuidv4, unique: true },
-  name: String,
+  name: { type: String, unique: true },
   description: String,
 });
 
-export const FoodCategory = model('FoodCategory', FoodCategorySchema);
+export const FoodCategory = model<IFoodCategory>(
+  "FoodCategory",
+  FoodCategorySchema
+);

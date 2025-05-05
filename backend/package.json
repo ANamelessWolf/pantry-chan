@@ -6,7 +6,8 @@
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
-    "migrate": "ts-node-dev src/migrations/runMigrations.ts"
+    "migrate": "ts-node-dev src/migrations/runMigrations.ts",
+    "seed:foods": "ts-node-dev src/scripts/seedFoods.ts"
   },
   "keywords": [],
   "author": "",

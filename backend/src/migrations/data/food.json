@@ -1,0 +1,343 @@
+[
+  {
+    "name": "Granny Smith Apple",
+    "category": "Fruits",
+    "portion": {
+      "value": 1,
+      "unit": "Piece"
+    },
+    "macros": {
+      "Portion": {
+        "value": 1,
+        "unit": "Piece"
+      },
+      "Calories": 52,
+      "TotalFat_g": 0.2,
+      "SaturatedFat_g": 0,
+      "Cholesterol_mg": 0,
+      "Sodium_mg": 1,
+      "Potassium_mg": 107,
+      "Carbohydrates_g": 14,
+      "DietaryFiber_g": 2.4,
+      "Sugars_g": 10,
+      "Protein_g": 0.3,
+      "VitaminC_mg": 4.6,
+      "Calcium_mg": 6,
+      "Iron_mg": 0.12,
+      "VitaminD_IU": 0,
+      "VitaminB6_mg": 0.041,
+      "VitaminB12_microg": 0,
+      "Magnesium_mg": 5
+    }
+  },
+  {
+    "name": "Pear",
+    "category": "Fruits",
+    "portion": {
+      "value": 1,
+      "unit": "Piece"
+    },
+    "macros": {
+      "Portion": {
+        "value": 1,
+        "unit": "Piece"
+      },
+      "Calories": 57,
+      "TotalFat_g": 0.1,
+      "SaturatedFat_g": 0,
+      "Cholesterol_mg": 0,
+      "Sodium_mg": 1,
+      "Potassium_mg": 116,
+      "Carbohydrates_g": 15,
+      "DietaryFiber_g": 3.1,
+      "Sugars_g": 9.8,
+      "Protein_g": 0.4,
+      "VitaminC_mg": 4.3,
+      "Calcium_mg": 9,
+      "Iron_mg": 0.18,
+      "VitaminD_IU": 0,
+      "VitaminB6_mg": 0.03,
+      "VitaminB12_microg": 0,
+      "Magnesium_mg": 7
+    }
+  },
+  {
+    "name": "Pink Grapefruit",
+    "category": "Fruits",
+    "portion": {
+      "value": 1,
+      "unit": "Piece"
+    },
+    "macros": {
+      "Portion": {
+        "value": 1,
+        "unit": "Piece"
+      },
+      "Calories": 52,
+      "TotalFat_g": 0.2,
+      "SaturatedFat_g": 0,
+      "Cholesterol_mg": 0,
+      "Sodium_mg": 0,
+      "Potassium_mg": 135,
+      "Carbohydrates_g": 13,
+      "DietaryFiber_g": 2,
+      "Sugars_g": 8.5,
+      "Protein_g": 0.9,
+      "VitaminC_mg": 38,
+      "Calcium_mg": 22,
+      "Iron_mg": 0.1,
+      "VitaminD_IU": 0,
+      "VitaminB6_mg": 0.04,
+      "VitaminB12_microg": 0,
+      "Magnesium_mg": 9
+    }
+  },
+  {
+    "name": "Eureka Lemon",
+    "category": "Fruits",
+    "portion": {
+      "value": 1,
+      "unit": "Piece"
+    },
+    "macros": {
+      "Portion": {
+        "value": 1,
+        "unit": "Piece"
+      },
+      "Calories": 17,
+      "TotalFat_g": 0.2,
+      "SaturatedFat_g": 0,
+      "Cholesterol_mg": 0,
+      "Sodium_mg": 1,
+      "Potassium_mg": 80,
+      "Carbohydrates_g": 5.4,
+      "DietaryFiber_g": 1.6,
+      "Sugars_g": 1.5,
+      "Protein_g": 0.6,
+      "VitaminC_mg": 30,
+      "Calcium_mg": 15,
+      "Iron_mg": 0.3,
+      "VitaminD_IU": 0,
+      "VitaminB6_mg": 0.05,
+      "VitaminB12_microg": 0,
+      "Magnesium_mg": 4
+    }
+  },
+  {
+    "name": "Blueberries",
+    "category": "Fruits",
+    "portion": {
+      "value": 100,
+      "unit": "Gram"
+    },
+    "macros": {
+      "Portion": {
+        "value": 100,
+        "unit": "Gram"
+      },
+      "Calories": 57,
+      "TotalFat_g": 0.3,
+      "SaturatedFat_g": 0,
+      "Cholesterol_mg": 0,
+      "Sodium_mg": 1,
+      "Potassium_mg": 77,
+      "Carbohydrates_g": 14,
+      "DietaryFiber_g": 2.4,
+      "Sugars_g": 10,
+      "Protein_g": 0.7,
+      "VitaminC_mg": 9.7,
+      "Calcium_mg": 6,
+      "Iron_mg": 0.28,
+      "VitaminD_IU": 0,
+      "VitaminB6_mg": 0.05,
+      "VitaminB12_microg": 0,
+      "Magnesium_mg": 6
+    }
+  },
+  {
+    "name": "Strawberries",
+    "category": "Fruits",
+    "portion": {
+      "value": 100,
+      "unit": "Gram"
+    },
+    "macros": {
+      "Portion": {
+        "value": 100,
+        "unit": "Gram"
+      },
+      "Calories": 32,
+      "TotalFat_g": 0.3,
+      "SaturatedFat_g": 0,
+      "Cholesterol_mg": 0,
+      "Sodium_mg": 1,
+      "Potassium_mg": 153,
+      "Carbohydrates_g": 7.7,
+      "DietaryFiber_g": 2,
+      "Sugars_g": 4.9,
+      "Protein_g": 0.7,
+      "VitaminC_mg": 58.8,
+      "Calcium_mg": 16,
+      "Iron_mg": 0.4,
+      "VitaminD_IU": 0,
+      "VitaminB6_mg": 0.05,
+      "VitaminB12_microg": 0,
+      "Magnesium_mg": 13
+    }
+  },
+  {
+    "name": "Mango",
+    "category": "Fruits",
+    "portion": {
+      "value": 100,
+      "unit": "Gram"
+    },
+    "macros": {
+      "Portion": {
+        "value": 100,
+        "unit": "Gram"
+      },
+      "Calories": 60,
+      "TotalFat_g": 0.4,
+      "SaturatedFat_g": 0.1,
+      "Cholesterol_mg": 0,
+      "Sodium_mg": 1,
+      "Potassium_mg": 168,
+      "Carbohydrates_g": 15,
+      "DietaryFiber_g": 1.6,
+      "Sugars_g": 14,
+      "Protein_g": 0.8,
+      "VitaminC_mg": 36.4,
+      "Calcium_mg": 11,
+      "Iron_mg": 0.2,
+      "VitaminD_IU": 0,
+      "VitaminB6_mg": 0.1,
+      "VitaminB12_microg": 0,
+      "Magnesium_mg": 10
+    }
+  },
+  {
+    "name": "Papaya",
+    "category": "Fruits",
+    "portion": {
+      "value": 100,
+      "unit": "Gram"
+    },
+    "macros": {
+      "Portion": {
+        "value": 100,
+        "unit": "Gram"
+      },
+      "Calories": 43,
+      "TotalFat_g": 0.3,
+      "SaturatedFat_g": 0.1,
+      "Cholesterol_mg": 0,
+      "Sodium_mg": 8,
+      "Potassium_mg": 182,
+      "Carbohydrates_g": 11,
+      "DietaryFiber_g": 1.7,
+      "Sugars_g": 7.8,
+      "Protein_g": 0.5,
+      "VitaminC_mg": 60.9,
+      "Calcium_mg": 20,
+      "Iron_mg": 0.25,
+      "VitaminD_IU": 0,
+      "VitaminB6_mg": 0.04,
+      "VitaminB12_microg": 0,
+      "Magnesium_mg": 21
+    }
+  },
+  {
+    "name": "Red Onion",
+    "category": "Vegetables",
+    "portion": {
+      "value": 100,
+      "unit": "Gram"
+    },
+    "macros": {
+      "Portion": {
+        "value": 100,
+        "unit": "Gram"
+      },
+      "Calories": 40,
+      "TotalFat_g": 0.1,
+      "SaturatedFat_g": 0,
+      "Cholesterol_mg": 0,
+      "Sodium_mg": 4,
+      "Potassium_mg": 146,
+      "Carbohydrates_g": 9.3,
+      "DietaryFiber_g": 1.7,
+      "Sugars_g": 4.2,
+      "Protein_g": 0.9,
+      "VitaminC_mg": 7.4,
+      "Calcium_mg": 23,
+      "Iron_mg": 0.2,
+      "VitaminD_IU": 0,
+      "VitaminB6_mg": 0.12,
+      "VitaminB12_microg": 0,
+      "Magnesium_mg": 10
+    }
+  },
+  {
+    "name": "White Onion",
+    "category": "Vegetables",
+    "portion": {
+      "value": 100,
+      "unit": "Gram"
+    },
+    "macros": {
+      "Portion": {
+        "value": 100,
+        "unit": "Gram"
+      },
+      "Calories": 42,
+      "TotalFat_g": 0.1,
+      "SaturatedFat_g": 0,
+      "Cholesterol_mg": 0,
+      "Sodium_mg": 3,
+      "Potassium_mg": 160,
+      "Carbohydrates_g": 9.3,
+      "DietaryFiber_g": 1.2,
+      "Sugars_g": 4.2,
+      "Protein_g": 1.1,
+      "VitaminC_mg": 8,
+      "Calcium_mg": 23,
+      "Iron_mg": 0.21,
+      "VitaminD_IU": 0,
+      "VitaminB6_mg": 0.13,
+      "VitaminB12_microg": 0,
+      "Magnesium_mg": 10
+    }
+  },
+  {
+    "name": "Potato",
+    "category": "Tubers and Roots",
+    "portion": {
+      "value": 100,
+      "unit": "Gram"
+    },
+    "macros": {
+      "Portion": {
+        "value": 100,
+        "unit": "Gram"
+      },
+      "Calories": 77,
+      "TotalFat_g": 0.1,
+      "SaturatedFat_g": 0,
+      "Cholesterol_mg": 0,
+      "Sodium_mg": 6,
+      "Potassium_mg": 429,
+      "Carbohydrates_g": 17,
+      "DietaryFiber_g": 2.2,
+      "Sugars_g": 0.8,
+      "Protein_g": 2,
+      "VitaminC_mg": 19.7,
+      "Calcium_mg": 10,
+      "Iron_mg": 0.81,
+      "VitaminD_IU": 0,
+      "VitaminB6_mg": 0.3,
+      "VitaminB12_microg": 0,
+      "Magnesium_mg": 23
+    }
+  }
+]
