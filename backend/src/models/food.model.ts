@@ -1,10 +1,40 @@
-import { Schema, model } from "mongoose";
+import { Schema, Types, model } from "mongoose";
 import { v4 as uuidv4 } from "uuid";
-import { FoodMacrosSchema } from "./foodMacros.model";
+import { FoodMacrosOutput, FoodMacrosSchema, IFoodMacros } from "./foodMacros.model";
+import { FoodCategoryOutput, IFoodCategory } from "./foodCategory.model";
+import { ConversionUnitOutput, IUnit, UnitOutput } from "./unit.model";
 
-const FoodSchema = new Schema({
+export interface IFood extends Document {
+  id: string;
+  _id: Types.ObjectId;
+  category: Types.ObjectId;
+  name: string;
+  portion: {
+    value: number;
+    unit: Types.ObjectId;
+    conversions: {
+      unit: Types.ObjectId;
+      conversionValue: number;
+    }[];
+  };
+  macros: IFoodMacros;
+}
+
+export interface FoodOutput {
+  id: string;
+  name: string;
+  category: FoodCategoryOutput;
+  portion: {
+    value: number;
+    unit: UnitOutput;
+    conversions: ConversionUnitOutput[];
+  };
+  macros: FoodMacrosOutput;
+}
+
+const FoodSchema = new Schema<IFood>({
   id: { type: String, default: uuidv4, unique: true },
-  category: { type: Schema.Types.ObjectId, ref: "FoodCategory" },
+  category: { type: Schema.Types.ObjectId, ref: 'FoodCategory' },
   name: String,
   portion: {
     value: Number,
@@ -19,4 +49,4 @@ const FoodSchema = new Schema({
   macros: FoodMacrosSchema,
 });
 
-export const Food = model("Food", FoodSchema);
+export const Food = model<IFood>("Food", FoodSchema);

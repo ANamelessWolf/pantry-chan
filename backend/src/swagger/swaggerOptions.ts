@@ -4,6 +4,9 @@ import { InventorySchema } from '../schemas/inventory.schema';
 import { RecipeSchema } from '../schemas/recipe.schema';
 import { UnitSchema } from '../schemas/unit.schema';
 import { AuthSchema } from '../schemas/auth.schema';
+import { FoodOutputSchema } from '../schemas/foodOutput.schema';
+import { UnitOutputSchema } from '../schemas/unitOutput.schema';
+import { HttpFoodResponseSchema } from '../schemas/httpFoodResponse.schema';
 
 export const swaggerOptions = {
   definition: {
@@ -29,9 +32,12 @@ export const swaggerOptions = {
       schemas: {
         ...FoodSchema,
         ...FoodCategorySchema,
+        ...FoodOutputSchema,
+        ...HttpFoodResponseSchema,
         ...InventorySchema,
         ...RecipeSchema,
         ...UnitSchema,
+        ...UnitOutputSchema,
         ...AuthSchema
       }
     },

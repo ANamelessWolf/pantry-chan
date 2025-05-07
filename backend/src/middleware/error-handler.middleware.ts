@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 import { Exception } from "../config/exeption";
 import { HttpErrorResponse, HttpResponse } from "../config/http-response";
-import dotenv from 'dotenv';
+import dotenv from "dotenv";
 dotenv.config();
 
 /**
@@ -28,10 +28,11 @@ export const errorHandler = (
 
   // Send the error response to the client.
   if (process.env.DEBUG === "true") {
+    const stack = err.stack?.split("\n").map((line) => line.trim());
     res.status(errorStatus).json(
       new HttpErrorResponse({
         success: false,
-        data: err.stack?.split("\n"),
+        data: stack,
         errorCode: errorStatus,
         message: errorMessage,
         error: err.detail,
