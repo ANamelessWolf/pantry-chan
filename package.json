@@ -4,12 +4,16 @@
   "description": "A react app, to manage pantry inventory and cooking recipes",
   "main": "index.js",
 "scripts": {
-  "dev": "concurrently \"npm:docker:mongo\" \"npm run dev --prefix backend\" \"npm start --prefix frontend\"",
-  "docker:mongo": "docker compose -f docker-compose-mongo.yml up -d",
+  "docker:up": "docker compose up -d",
+  "docker:up:dev": "docker compose -f docker-compose.dev.yml up -d",
+  "docker:up:db": "docker compose -f docker-compose.db.yml up -d",
+  "docker:down": "docker compose down",
+  "docker:down:dev": "docker compose -f docker-compose.dev.yml down",
+  "docker:down:db": "docker compose -f docker-compose.db.yml down",
+  "dev": "concurrently \"npm:docker:up:db\" \"npm run dev --prefix backend\" \"npm start --prefix frontend\"",
   "start:backend": "npm run dev --prefix backend",
   "start:frontend": "npm start --prefix frontend",
-  "migrate": "npm run migrate --prefix backend",
-  "docker:mongo:stop": "docker compose -f docker-compose-mongo.yml down"
+  "migrate": "npm run migrate --prefix backend"
 },
   "keywords": [],
   "author": "",

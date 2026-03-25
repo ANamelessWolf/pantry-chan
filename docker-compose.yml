@@ -1,0 +1,64 @@
+services:
+  pantry_db:
+    image: mongo:6
+    restart: always
+    ports:
+      - "27019:27017"
+    volumes:
+      - pantry_mongo_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  pantry_backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      target: production
+    ports:
+      - "4001:4000"
+    environment:
+      - NODE_ENV=production
+      - PORT=4000
+      - MONGO_URI=mongodb://pantry_db:27017
+      - JWT_SECRET=${JWT_SECRET:-changeme}
+    depends_on:
+      pantry_db:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "require('net').createConnection({port:4000,host:'localhost'}).on('connect',()=>process.exit(0)).on('error',()=>process.exit(1))",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+
+  pantry_frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      target: production
+      args:
+        - REACT_APP_API_URL=http://localhost:4001/api
+    ports:
+      - "3001:3000"
+    depends_on:
+      pantry_backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-qO/dev/null", "http://localhost:3000"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+volumes:
+  pantry_mongo_data:

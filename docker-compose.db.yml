@@ -1,0 +1,17 @@
+services:
+  pantry_db:
+    image: mongo:6
+    restart: always
+    ports:
+      - "27019:27017"
+    volumes:
+      - pantry_mongo_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+volumes:
+  pantry_mongo_data:
