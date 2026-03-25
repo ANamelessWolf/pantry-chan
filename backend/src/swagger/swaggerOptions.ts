@@ -8,7 +8,7 @@ import { FoodOutputSchema } from '../schemas/foodOutput.schema';
 import { UnitOutputSchema } from '../schemas/unitOutput.schema';
 import { HttpFoodResponseSchema } from '../schemas/httpFoodResponse.schema';
 
-export const swaggerOptions = {
+export const getSwaggerOptions = (serverUrl: string) => ({
   definition: {
     openapi: '3.0.0',
     info: {
@@ -18,7 +18,8 @@ export const swaggerOptions = {
     },
     servers: [
       {
-        url: 'http://localhost:5000/api',
+        url: serverUrl,
+        description: 'Current server',
       },
     ],
     components: {
@@ -48,4 +49,4 @@ export const swaggerOptions = {
     ],
   },
   apis: ['./src/docs/*.ts'], // 📄 Only scan documentation files
-};
+});

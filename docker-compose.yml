@@ -25,6 +25,7 @@ services:
       - PORT=4000
       - MONGO_URI=mongodb://pantry_db:27017
       - JWT_SECRET=${JWT_SECRET:-changeme}
+      - SWAGGER_SERVER_URL=http://localhost:4001/api
     depends_on:
       pantry_db:
         condition: service_healthy

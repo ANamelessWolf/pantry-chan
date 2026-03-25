@@ -25,12 +25,13 @@ services:
       - PORT=4000
       - MONGO_URI=mongodb://pantry_db:27017
       - JWT_SECRET=${JWT_SECRET:-changeme}
+      - SWAGGER_SERVER_URL=http://localhost:4001/api
     volumes:
       - ./backend:/app
       - pantry_backend_node_modules:/app/node_modules
     depends_on:
       pantry_db:
-        condition: service_healthy
+        condition: service_started
     healthcheck:
       test:
         [
@@ -41,8 +42,8 @@ services:
         ]
       interval: 10s
       timeout: 5s
-      retries: 5
-      start_period: 20s
+      retries: 10
+      start_period: 30s
 
   pantry_frontend:
     build:
@@ -52,6 +53,7 @@ services:
     ports:
       - "3001:3000"
     environment:
+      - PORT=3000
       - CHOKIDAR_USEPOLLING=true
       - REACT_APP_API_URL=http://localhost:4001/api
     volumes:
@@ -61,13 +63,13 @@ services:
     stdin_open: true
     depends_on:
       pantry_backend:
-        condition: service_healthy
+        condition: service_started
     healthcheck:
       test: ["CMD", "wget", "-qO/dev/null", "http://localhost:3000"]
       interval: 15s
       timeout: 10s
-      retries: 5
-      start_period: 60s
+      retries: 10
+      start_period: 90s
 
 volumes:
   pantry_mongo_data:
