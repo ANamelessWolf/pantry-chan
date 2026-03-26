@@ -13,7 +13,9 @@
   "dev": "concurrently \"npm:docker:up:db\" \"npm run dev --prefix backend\" \"npm start --prefix frontend\"",
   "start:backend": "npm run dev --prefix backend",
   "start:frontend": "npm start --prefix frontend",
-  "migrate": "npm run migrate --prefix backend"
+  "migrate": "npm run migrate --prefix backend",
+  "db:backup": "docker compose -f docker-compose.dev.yml exec pantry_backend npm run db:backup",
+  "db:restore": "docker compose -f docker-compose.dev.yml exec pantry_backend npm run db:restore --"
 },
   "keywords": [],
   "author": "",

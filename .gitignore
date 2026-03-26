@@ -138,3 +138,4 @@ backend/log/*
 .vscode/launch.json
 .claude/skills/*
 backend/media/*
+backups/*
