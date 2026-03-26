@@ -3,35 +3,35 @@ import api from '../api/axios';
 
 // ─── Thunks ──────────────────────────────────────────────────────────────────
 
-export const fetchFoodCategories = createAsyncThunk(
-  'foodCategories/fetchAll',
+export const fetchUnits = createAsyncThunk(
+  'units/fetchAll',
   async (_, { rejectWithValue }) => {
     try {
-      const res = await api.get('/category');
+      const res = await api.get('/unit');
       // Response: HttpResponse { data: [...], success, message }
       return res.data?.data ?? res.data;
     } catch (err) {
-      return rejectWithValue(err.response?.data?.message || 'Failed to load categories');
+      return rejectWithValue(err.response?.data?.message || 'Failed to load units');
     }
   }
 );
 
-export const createFoodCategory = createAsyncThunk(
-  'foodCategories/create',
+export const createUnit = createAsyncThunk(
+  'units/create',
   async (data, { rejectWithValue }) => {
     try {
-      const res = await api.post('/category', data);
+      const res = await api.post('/unit', data);
       return res.data?.data ?? res.data;
     } catch (err) {
-      return rejectWithValue(err.response?.data?.message || 'Failed to create category');
+      return rejectWithValue(err.response?.data?.message || 'Failed to create unit');
     }
   }
 );
 
 // ─── Slice ───────────────────────────────────────────────────────────────────
 
-const foodCategoriesSlice = createSlice({
-  name: 'foodCategories',
+const unitsSlice = createSlice({
+  name: 'units',
   initialState: {
     items: [],
     loading: false,
@@ -40,22 +40,22 @@ const foodCategoriesSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchFoodCategories.pending, (state) => {
+      .addCase(fetchUnits.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
-      .addCase(fetchFoodCategories.fulfilled, (state, action) => {
+      .addCase(fetchUnits.fulfilled, (state, action) => {
         state.loading = false;
         state.items = action.payload ?? [];
       })
-      .addCase(fetchFoodCategories.rejected, (state, action) => {
+      .addCase(fetchUnits.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
       })
-      .addCase(createFoodCategory.fulfilled, (state, action) => {
+      .addCase(createUnit.fulfilled, (state, action) => {
         if (action.payload?.id) state.items.push(action.payload);
       });
   },
 });
 
-export default foodCategoriesSlice.reducer;
+export default unitsSlice.reducer;

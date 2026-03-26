@@ -1,5 +1,14 @@
 import { HydratedDocument } from "mongoose";
-import { IUnit, Unit, UnitOutput } from "../../models";
+import { IUnit, Unit, UnitOutput, BAD_UNIT } from "../../models";
+
+/**
+ * Get the MongoDB ObjectId of a unit from its UUID id field.
+ */
+export const getUnitObjectId = async (unitId: string) => {
+  const unitDoc = await Unit.findOne({ id: unitId });
+  if (!unitDoc) throw new Error(`Unit not found: ${unitId}`);
+  return unitDoc._id;
+};
 
 /**
  * Fetches all units from the database and returns them as a Map.
@@ -23,10 +32,9 @@ export const getUnit = (
   unitMap: Map<string, UnitOutput>,
   key: string
 ): UnitOutput => {
+  if (!key) return BAD_UNIT;
   const unit = unitMap.get(key);
-  if (!unit) {
-    throw new Error(`Unit with key ${key} is not defined`);
-  }
+  if (!unit) return BAD_UNIT;
   return {
     id: unit.id,
     name: unit.name,

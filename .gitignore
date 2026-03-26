@@ -136,3 +136,4 @@ dist
 .pnp.*
 backend/log/*
 .vscode/launch.json
+.claude/skills/*

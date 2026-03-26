@@ -1,3 +1,4 @@
+import path from 'path';
 import { FoodSchema } from '../schemas/food.schema';
 import { FoodCategorySchema } from '../schemas/foodCategory.schema';
 import { InventorySchema } from '../schemas/inventory.schema';
@@ -48,5 +49,7 @@ export const getSwaggerOptions = (serverUrl: string) => ({
       },
     ],
   },
-  apis: ['./src/docs/*.ts'], // 📄 Only scan documentation files
+  // __dirname resolves to src/swagger/ in dev (ts-node) and dist/swagger/ in production
+  // so ../docs always points to the correct docs folder regardless of environment
+  apis: [path.join(__dirname, `../docs/*.${process.env.NODE_ENV === 'production' ? 'js' : 'ts'}`)]
 });

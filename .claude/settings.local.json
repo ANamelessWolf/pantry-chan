@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python skills/ui-ux-pro-max/scripts/search.py \"food catalog nutrition dashboard management clean modern\" --design-system -p \"PantryChan Food\")",
+      "Bash(python3 skills/ui-ux-pro-max/scripts/search.py \"food catalog nutrition dashboard management clean modern\" --design-system -p \"PantryChan Food\")",
+      "Bash(py skills/ui-ux-pro-max/scripts/search.py \"food catalog nutrition dashboard management clean modern\" --design-system -p \"PantryChan Food\")",
+      "Bash(mkdir -p \"z:/dev/node/pantry-chan/frontend/src/constants/translations\")",
+      "Bash(mkdir -p \"z:/dev/node/pantry-chan/frontend/src/components/food\")",
+      "Bash(npm install:*)",
+      "Bash(docker compose:*)"
+    ]
+  }
+}

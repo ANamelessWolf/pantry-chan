@@ -12,6 +12,8 @@ CMD ["npm", "start"]
 FROM node:23-alpine AS builder
 ARG REACT_APP_API_URL=http://localhost:4001/api
 ENV REACT_APP_API_URL=$REACT_APP_API_URL
+# Use window.location.port at runtime so the WS client doesn't hardcode the internal container port
+ENV WDS_SOCKET_PORT=0
 WORKDIR /app
 COPY package*.json ./
 RUN npm install

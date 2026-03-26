@@ -9,6 +9,7 @@ export interface IFood extends Document {
   _id: Types.ObjectId;
   category: Types.ObjectId;
   name: string;
+  imagePath?: string;
   portion: {
     value: number;
     unit: Types.ObjectId;
@@ -23,6 +24,7 @@ export interface IFood extends Document {
 export interface FoodOutput {
   id: string;
   name: string;
+  imageUrl?: string;
   category: FoodCategoryOutput;
   portion: {
     value: number;
@@ -36,6 +38,7 @@ const FoodSchema = new Schema<IFood>({
   id: { type: String, default: uuidv4, unique: true },
   category: { type: Schema.Types.ObjectId, ref: 'FoodCategory' },
   name: String,
+  imagePath: { type: String },
   portion: {
     value: Number,
     unit: { type: Schema.Types.ObjectId, ref: "Unit" },

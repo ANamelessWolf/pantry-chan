@@ -112,6 +112,7 @@ export const mapFoods = async (foods: any[]): Promise<FoodOutput[]> => {
       const mapped: FoodOutput = {
         id: food.id,
         name: food.name,
+        imageUrl: food.imagePath ? `/media/food/${food.imagePath}` : undefined,
         category: formatCategory(food.category),
         portion: {
           value: food.portion.value,
