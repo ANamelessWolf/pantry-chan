@@ -7,7 +7,6 @@ import { fetchFoodCategories } from '../store/foodCategoriesSlice';
 import { fetchUnits } from '../store/unitsSlice';
 import { uploadFoodImage } from '../api/foodApi';
 import FoodCatalog from '../components/food/FoodCatalog';
-import FoodFilters from '../components/food/FoodFilters';
 import FoodFormModal from '../components/food/FoodFormModal';
 import DeleteFoodConfirmModal from '../components/food/DeleteFoodConfirmModal';
 import NutritionFactsModal from '../components/food/NutritionFactsModal';
@@ -19,10 +18,10 @@ const lang = 'en';
 function Food() {
   const dispatch = useDispatch();
   const { items: foods, loading, error } = useSelector((state) => state.food);
-
-  // ── Filter state
-  const [search, setSearch] = useState('');
-  const [categoryFilter, setCategoryFilter] = useState('');
+  const search = useSelector((state) => state.search.query);
+  const categoryFilter = useSelector((state) => state.filters.foodFilters.category);
+  const nameFilter = useSelector((state) => state.filters.foodFilters.name);
+  const macroFilters = useSelector((state) => state.filters.foodFilters.macros);
 
   // ── Modal state
   const [formOpen, setFormOpen] = useState(false);
@@ -45,20 +44,10 @@ function Food() {
     dispatch(fetchUnits());
   }, [dispatch]);
 
-  // ── Derive unique categories from loaded items (used by FoodFilters)
-  const categories = useMemo(() => {
-    const seen = new Map();
-    foods.forEach((f) => {
-      if (f.category?.id && !seen.has(f.category.id)) {
-        seen.set(f.category.id, f.category);
-      }
-    });
-    return Array.from(seen.values());
-  }, [foods]);
-
   // ── Client-side filtering
   const filteredFoods = useMemo(() => {
     const q = search.toLowerCase();
+    const nq = nameFilter.toLowerCase();
     return foods.filter((food) => {
       const matchesSearch =
         !search ||
@@ -67,9 +56,18 @@ function Food() {
         food.barcode?.toLowerCase().includes(q);
       const matchesCategory =
         !categoryFilter || food.category?.id === categoryFilter;
-      return matchesSearch && matchesCategory;
+      const matchesName =
+        !nameFilter || food.name?.toLowerCase().includes(nq);
+      const matchesMacros = macroFilters.every(({ key, compare, value }) => {
+        const actual = food.macros?.[key];
+        if (actual == null) return false;
+        if (compare === 'LessThan') return actual <= value;
+        if (compare === 'MoreThan') return actual >= value;
+        return actual === value;
+      });
+      return matchesSearch && matchesCategory && matchesName && matchesMacros;
     });
-  }, [foods, search, categoryFilter]);
+  }, [foods, search, categoryFilter, nameFilter, macroFilters]);
 
   // ── Handlers
 
@@ -175,22 +173,13 @@ function Food() {
         </Button>
       </Box>
 
-      {/* ── Filters */}
-      <FoodFilters
-        search={search}
-        onSearchChange={setSearch}
-        categoryFilter={categoryFilter}
-        onCategoryChange={setCategoryFilter}
-        categories={categories}
-        onClear={() => { setSearch(''); setCategoryFilter(''); }}
-      />
 
       {/* ── Results count */}
       {!loading && !error && foods.length > 0 && (
         <Typography className="food-catalog__count">
           {filteredFoods.length}{' '}
           {filteredFoods.length === 1 ? t[lang].results : t[lang].results_plural}
-          {(search || categoryFilter) ? ` of ${foods.length} total` : ''}
+          {(search || categoryFilter || nameFilter || macroFilters.length) ? ` of ${foods.length} total` : ''}
         </Typography>
       )}
 

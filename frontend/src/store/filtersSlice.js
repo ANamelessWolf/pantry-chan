@@ -6,16 +6,21 @@ const filtersSlice = createSlice({
     filtersActive: false,
     foodFilters: {
       category: '',
+      name: '',
       macros: [],
     },
   },
   reducers: {
     setFoodFilters: (state, action) => {
       state.foodFilters = action.payload;
-      state.filtersActive = true;
+      state.filtersActive = !!(
+        action.payload.category ||
+        action.payload.name ||
+        action.payload.macros?.length
+      );
     },
     clearFilters: (state) => {
-      state.foodFilters = { category: '', macros: [] };
+      state.foodFilters = { category: '', name: '', macros: [] };
       state.filtersActive = false;
     },
   },

@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from './NavBar';
 import Footer from './Footer';
+import FoodFilterModal from '../food/FoodFilterModal';
 import { Container } from '@mui/material';
 
 function Layout({ children }) {
@@ -11,6 +12,7 @@ function Layout({ children }) {
         {children}
       </Container>
       <Footer />
+      <FoodFilterModal />
     </div>
   );
 }
